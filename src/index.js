@@ -12,6 +12,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+tools.smoothScrolling();
 // Get the navbar
 var navbar = document.getElementById("menu");
 // Get the offset position of the navbar

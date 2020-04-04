@@ -5,7 +5,7 @@ export default class Portfolio extends Component {
         return (
             <div id = "page-timeline">
                 <section id="3">
-                    PortFolio
+
                 </section>
             </div>
         );

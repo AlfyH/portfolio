@@ -16,12 +16,14 @@ export default class Main extends Component {
     render() {
         return (
             <div id="view-main">
-                <div className="main-content">
+                <div id="main-content">
                     <Home></Home>
                     <Menu tools={this.props.tools}></Menu>
-                    <About></About>
-                    <Portfolio></Portfolio>
-                    <Contact></Contact>
+                    <div id="main-content-after-menu">
+                        <About></About>
+                        <Portfolio></Portfolio>
+                        <Contact></Contact>
+                    </div>
                 </div>
             </div>
         )

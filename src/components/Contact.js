@@ -5,7 +5,7 @@ export default class Contact extends Component {
         return (
             <div id = "page-contact">
                 <section id="4">
-                    Contact
+
                 </section>
             </div>
         )}
