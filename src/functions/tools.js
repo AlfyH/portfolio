@@ -6,6 +6,7 @@ var tools = {
         $('#view-main').toggleClass('sidebar-active');
         $('#menu-hamburger-cont').toggleClass('sidebar-active').toggleClass('fadeout');
         $('#menu').toggleClass('sidebar-active');
+        $('#menu-nav').toggleClass('sidebar-active');
     },
 
     stickyNavbar(sticky, navbar) {

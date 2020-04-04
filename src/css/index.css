@@ -114,6 +114,10 @@ a, a:hover, a:focus {
   color: #fff5d7;
 }
 
+#menu-nav.sidebar-active {
+  opacity: 0;
+}
+
 #menu-nav.sticky {
   opacity: 0;
   transition-duration: 0.5s;
@@ -145,7 +149,6 @@ a, a:hover, a:focus {
   width: calc(100vw - 270px);
   transform: translate(270px, 0);
   transition-duration: 0.7s;
-  height: 10px;
 }
 
 h1.text-intro {
@@ -214,6 +217,23 @@ h1.text-intro {
   line-height: 200px;
   font-size: 80px;
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  #menu-nav {
+    display: none;
+  }
+
+  #view-main.sidebar-active {
+    transition-duration: 0s;
+    opacity: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .app-wrapper {
+    background-color: black;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
