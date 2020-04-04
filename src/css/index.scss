@@ -1,0 +1,197 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css");
+
+:root{
+    --sidebar-width: 270px;
+    --menu-height: 45px;
+}
+
+.app-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: rgb(55, 55, 55);
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: rgb(242,243,247);
+    transition: all 0.3s;
+    margin-left: -250px;
+    height: 100vh;
+    width: var(--sidebar-width);
+    
+    .sidebar-header {
+        margin: 20px auto 0 auto;
+        width: 80px;
+    }
+
+    ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+    }
+
+    ul p {
+        color: #fff;
+        padding: 10px;
+    }
+
+    ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+
+    ul li a:hover {
+        color: #7386D5;
+        background: #fff;
+    }
+}
+
+#sidebar.sidebar-active {
+    margin-left: 0;
+    position: fixed;
+    z-index:2;
+}
+
+#menu{
+    height: var(--menu-height);
+    background-color: black;
+    display: flex;
+}
+
+#menu-hamburger-cont.sidebar-active{
+    opacity: 0;
+    transition-duration:0.3s;
+    visibility: hidden;
+}
+
+#menu-hamburger{
+    height: var(--menu-height); 
+    /* margin: 10px 10px 10px 10px; */
+}
+
+#menu-nav {
+    ul {
+        list-style-type: none;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline;
+        padding: 0 20px;
+    }
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .maincontent-toadd {
+  padding-top: 60px;
+}
+
+#view-main {
+    width: 100vw;
+}
+
+#view-main.sidebar-active {
+    width: calc(100vw - var(--sidebar-width));
+    transform: translate( var(--sidebar-width), 0);
+    transition-duration:0.3s;
+}
+
+h1.text-intro{
+    color: white;
+    text-align: center;
+}
+
+#page-home {
+    background-color: cyan;
+    background-image: url("../assets/ash.gif");
+    height: calc(100vh - var(--menu-height));
+    padding-top: 30vh;
+}
+
+#page-about {
+}
+
+#page-contact {
+}
+
+#page-timeline {
+    height: 700px;
+    background-color: darkcyan;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#image-rabbit{
+    width:80px;
+}
+#image-hamburger{
+    width:20px;
+    margin-top: calc(var(--menu-height)/6);
+    margin-left: 1vw;
+}
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 28%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell.is-selected {
+  background: #ED2;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}

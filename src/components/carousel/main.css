@@ -1,0 +1,31 @@
+.carousel.slide {
+  display: none;
+  max-width: 900px;
+  text-align: center;
+}
+
+.carousel.active {
+  display: block;
+}
+
+.carousel.slider {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 100px 0px 0px 0px;
+}
+
+.carousel.slider-items {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.carousel.slider-text {
+  width: 800px;
+}
+
