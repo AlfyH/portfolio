@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="440px" height="438px" viewBox="0 0 440 438" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Oval Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-500.000000, -293.000000)">
+            <g id="Oval-Copy-2" transform="translate(500.000000, 293.000000)">
+                <circle stroke="#000000" stroke-width="1" fill="#D8D8D8" fill-rule="evenodd" cx="219" cy="219" r="218.5"></circle>
+                <line x1="0.920502092" y1="216" x2="439.079498" y2="218" id="Line-Copy-2" stroke="#979797" stroke-width="1" stroke-linecap="square"></line>
+                <text id="ARTIST-DESIGNER-DEVE-Copy-2" font-family="TitilliumWeb-Black, Titillium Web" font-size="48" font-weight="700" line-spacing="37" fill="#2F1628">
+                    <tspan x="139.452" y="156.112305">ARTIST</tspan>
+                    <tspan x="106.02" y="193.112305">DESIGNER</tspan>
+                    <tspan x="88.5" y="230.112305">DEVELOPER</tspan>
+                </text>
+                <text id="by-Alfy-Hushairi-Copy" font-family="TitilliumWeb-Regular, Titillium Web" font-size="21" font-weight="normal" fill="#A09D9F">
+                    <tspan x="237.473" y="306">by Alfy Hushairi</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

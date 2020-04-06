@@ -6,16 +6,16 @@ class Nav extends Component {
             <div id="menu-nav">
                 <ul>
                     <li>
-                        <a href="#1">Home</a>
+                        <a href="#1">home</a>
                     </li>
                     <li>
-                        <a href="#2">About</a>
+                        <a href="#2">aboutUs</a>
                     </li>
                     <li>
-                        <a href="#3">Portfolio</a>
+                        <a href="#3">portfolio</a>
                     </li>
                     <li>
-                        <a href="#4">Contact</a>
+                        <a href="#4">contactUs</a>
                     </li>
                 </ul>
             </div>

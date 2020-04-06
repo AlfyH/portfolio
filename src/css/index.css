@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 .app-wrapper {
   display: flex;
   align-items: stretch;
@@ -7,7 +8,7 @@
 body {
   color: #2f1628;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Titillium Web", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -95,6 +96,7 @@ a, a:hover, a:focus {
 }
 
 #menu-nav {
+  font-family: "Titillium Web Regular";
   margin-top: calc(45px/6);
   margin-left: auto;
   margin-right: auto;
@@ -108,7 +110,7 @@ a, a:hover, a:focus {
 }
 #menu-nav li {
   display: inline;
-  padding: 0 50px;
+  padding: 0 30px;
 }
 #menu-nav li a {
   color: #fff5d7;
@@ -157,10 +159,27 @@ h1.text-intro {
 }
 
 #page-home {
-  background-color: cyan;
-  background-image: url("../assets/ash.gif");
+  background: url("../assets/background-circle2.svg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: calc(100vh - 45px);
+}
+
+#page-home-text {
+  background: url("../assets/background-text.svg") no-repeat center center fixed;
+  background-size: 300px, 300px;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+#page-home-text:hover {
+  background: url("../assets/background-text.svg") no-repeat center center fixed;
+  background-size: 400px, 400px;
+  height: 100vh;
   padding-top: 30vh;
+  transition: 0.5s;
 }
 
 #page-about {
