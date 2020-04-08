@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Menu from '../components/Menu';
 import background from '../assets/background-circle.png'
 import Sketch from './Sketch';
 import ash from "../assets/ash.gif"
@@ -12,8 +13,8 @@ class Home extends Component {
                 <div id = "page-home">
                     <div id="page-home-text">
                         </div>
-                        {/* <h1 className="text-intro">Hello I am Alfy <br></br>I am a web developer.</h1> */}
                 </div>
+                <Menu tools={this.props.tools}></Menu>
             </section>
         );
     }

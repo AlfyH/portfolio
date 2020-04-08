@@ -17,8 +17,8 @@ export default class Main extends Component {
         return (
             <div id="view-main">
                 <div id="main-content">
-                    <Home></Home>
-                    <Menu tools={this.props.tools}></Menu>
+                    <Home tools={this.props.tools}></Home>
+                    {/* <Menu tools={this.props.tools}></Menu> */}
                     <div id="main-content-after-menu">
                         <About></About>
                         <Portfolio></Portfolio>
