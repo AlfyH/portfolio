@@ -5,7 +5,7 @@ var tools = {
         $('#sidebar').toggleClass('sidebar-active');
         $('#view-main').toggleClass('sidebar-active');
         $('#menu-hamburger-cont').toggleClass('sidebar-active').toggleClass('fadeout');
-        $('#menu').toggleClass('sidebar-active');
+        $('#menu-side').toggleClass('sidebar-active');
         $('#menu-nav').toggleClass('sidebar-active');
     },
 

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import Home from '../components/Home';
-import About from '../components/About';
-import Portfolio from '../components/Portfolio';
-import Menu from '../components/Menu';
-import Contact from '../components/Contact';
+import Home from '../../pages/Home';
+import About from '../../pages/About';
+import Portfolio from '../../pages/Portfolio';
+import FullImage from '../../pages/FullImage';
+import Contact from '../../pages/Contact';
+// import MenuSide from '../components/MenuSide';
 
 
 export default class Main extends Component {
@@ -18,10 +19,11 @@ export default class Main extends Component {
             <div id="view-main">
                 <div id="main-content">
                     <Home tools={this.props.tools}></Home>
-                    {/* <Menu tools={this.props.tools}></Menu> */}
+                    {/* <MenuSide tools={this.props.tools}></MenuSide> */}
                     <div id="main-content-after-menu">
-                        <About></About>
+                        <About tools ={this.props.tools}></About>
                         <Portfolio></Portfolio>
+                        <FullImage></FullImage>
                         <Contact></Contact>
                     </div>
                 </div>

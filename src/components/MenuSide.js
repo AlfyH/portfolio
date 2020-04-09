@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import SideBarToggle from '../components/SidebarToggle';
-import Nav from '../components/Nav';
+import SideBarToggle from './SidebarToggle';
 
-class Menu extends Component {
+class MenuSide extends Component {
     render() {
         return (
             <div>
-                <div id="menu">
+                <div id="menu-side">
                     <div id="menu-hamburger-cont">
                         <SideBarToggle tools={this.props.tools}></SideBarToggle>
                     </div>
-                    <Nav></Nav>
                 </div>
             </div>
         );
     }
 }
 
-export default Menu;
+export default MenuSide;
