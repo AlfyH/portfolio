@@ -1,0 +1,10 @@
+#view-main {
+    width: 100vw;
+    background-color: black;
+}
+
+#view-main.sidebar-active {
+    overflow-x: hidden;
+    transform: translate( #{$sidebar-width}, 0);
+    transition-duration: 0.7s;
+}

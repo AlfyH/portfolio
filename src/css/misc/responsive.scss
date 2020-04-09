@@ -1,0 +1,21 @@
+@media only screen and (max-width: 600px) {
+    #menu-nav{
+        display: none;
+    }
+    
+    #view-main.sidebar-active {
+        width: calc(100vw - #{$sidebar-width});
+        height: 100vh;
+        overflow: hidden;
+    }
+    .app-wrapper{
+        background-color: black;
+    }
+}
+
+// @media only screen and (max-height: 600px) and (min-width: 700px)  {
+//         #page-portfolio {
+//             min-height: calc(100vh + 190px);
+//             background-color: red;
+//     }
+// }

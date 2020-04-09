@@ -1,0 +1,39 @@
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: rgb(242,243,247);
+    transition: all 0.7s;
+    margin-left: -250px;
+    height: 100vh;
+    width: #{$sidebar-width};
+    
+    .sidebar-header {
+        margin: 20px auto 0 auto;
+        width: 80px;
+    }
+
+    ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+    }
+
+    ul p {
+        padding: 10px;
+    }
+
+    ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+
+    ul li a:hover {
+        color: #7386D5;
+        background: #fff;
+    }
+}
+
+#sidebar.sidebar-active {
+    margin-left: 0;
+    position: fixed;
+    z-index:2;
+}

@@ -1,0 +1,87 @@
+//Global variables
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap%22%20rel=%22stylesheet");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css");
+
+$ragin-beige:#fff5d7;
+$coral-pink: #ff5e6c;
+$sleuthe-yellow:#feb300;
+$pink-leaf: #ffaaab;
+$main-font: #2f1628;
+
+$sidebar-width: 270px;
+$menu-height: 45px;
+
+//General
+.app-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+body {
+        overflow-x: hidden;
+    color: #{$main-font};
+    margin: 0;
+    font-family: 'Titillium Web','Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7em;
+    color:#1d1d1B;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#main-content{
+      background-color: black;
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+#main-content-after-menu.sticky {
+  margin-top: #{$menu-height};
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+//Fonts
+
+//Screens
+@import './views/mainview.scss';
+
+//Pages
+@import './pages/portfolio.scss';
+@import './pages/home.scss';
+@import './pages/about.scss';
+@import './pages/contact.scss';
+@import './pages/fullimage.scss';
+
+//Components
+@import './components/sidebar.scss';
+@import './components/menu.scss';
+@import './components/gallery.scss';
+@import './components/portfoliocont.scss';
+
+//Images
+@import './misc/images.scss';
+
+//Utils
+
+//Responsive
+@import './misc/responsive.scss';

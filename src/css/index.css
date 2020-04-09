@@ -1,12 +1,13 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap%22%20rel=%22stylesheet");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css");
 .app-wrapper {
   display: flex;
   align-items: stretch;
 }
 
 body {
+  overflow-x: hidden;
   color: #2f1628;
   margin: 0;
   font-family: "Titillium Web", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -29,6 +30,91 @@ a, a:hover, a:focus {
   color: inherit;
   text-decoration: none;
   transition: all 0.3s;
+}
+
+#main-content {
+  background-color: black;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+#main-content-after-menu.sticky {
+  margin-top: 45px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#view-main {
+  width: 100vw;
+  background-color: black;
+}
+
+#view-main.sidebar-active {
+  overflow-x: hidden;
+  transform: translate(270px, 0);
+  transition-duration: 0.7s;
+}
+
+#page-portfolio {
+  padding: 64px 20vw;
+  min-width: 100vw;
+  background-color: black;
+}
+
+#page-home {
+  background: url("../assets/several-circles.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+h1.text-intro {
+  color: white;
+  text-align: center;
+}
+
+#page-home-text {
+  background: url("../assets/background-text.svg") no-repeat center center fixed;
+  background-size: 300px, 300px;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+#page-home-text:hover {
+  background: url("../assets/background-text.svg") no-repeat center center fixed;
+  background-size: 400px, 400px;
+  height: 100vh;
+  padding-top: 30vh;
+  transition: 0.5s;
+}
+
+#page-about {
+  display: inline-block;
+  max-width: 100vw;
+  background-color: #f3f0ed;
+}
+
+.pagePadding {
+  padding: 64px 15vw;
+}
+
+#page-contact {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: #f3f0ed;
+}
+
+#full-image {
+  background: url("../assets/me-bw.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 30vh;
 }
 
 #sidebar {
@@ -66,10 +152,15 @@ a, a:hover, a:focus {
   z-index: 2;
 }
 
-#menu {
+#menu-side {
   height: 45px;
-  background-color: #D8D8D8;
-  opacity: 0.3;
+  background-color: black;
+  display: flex;
+}
+
+#menu-top {
+  padding-top: 20px;
+  height: 45px;
   display: flex;
 }
 
@@ -100,9 +191,9 @@ a, a:hover, a:focus {
 #menu-nav {
   font-family: "TitilliumWeb-Regular";
   font-size: 1.4em;
-  margin-top: calc(45px/6);
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
   opacity: 1;
   transition-duration: 0.5s;
 }
@@ -129,130 +220,11 @@ a, a:hover, a:focus {
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-#menu.sticky {
+#menu-side.sticky {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: transparent;
-}
-
-#main-content {
-  background-color: black;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-#main-content-after-menu.sticky {
-  margin-top: 45px;
-}
-
-#view-main {
-  width: 100vw;
-  background-color: black;
-}
-
-#view-main.sidebar-active {
-  width: calc(100vw - 270px);
-  transform: translate(270px, 0);
-  transition-duration: 0.7s;
-}
-
-h1.text-intro {
-  color: white;
-  text-align: center;
-}
-
-.pagePadding {
-  padding: 64px 15vw;
-}
-
-#portfolio-container {
-  position: relative;
-  width: 100%;
-}
-#portfolio-container img {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
-}
-#portfolio-container .inner-div {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  background: red;
-}
-
-#portfolio-container:hover img {
-  opacity: 0.5;
-}
-
-#portfolio-container:hover .inner-div {
-  opacity: 0.5;
-}
-
-#page-home {
-  background: url("../assets/several-circles.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: calc(100vh);
-}
-
-#page-home-text {
-  background: url("../assets/background-text.svg") no-repeat center center fixed;
-  background-size: 300px, 300px;
-  height: 100vh;
-  transition: 0.5s;
-}
-
-#page-home-text:hover {
-  background: url("../assets/background-text.svg") no-repeat center center fixed;
-  background-size: 400px, 400px;
-  height: 100vh;
-  padding-top: 30vh;
-  transition: 0.5s;
-}
-
-#page-about {
-  display: inline-block;
-  min-height: 100vh;
-  max-width: 100vw;
-  background-color: #f3f0ed;
-}
-
-#page-contact {
-  height: 700px;
-  background-color: khaki;
-}
-
-#page-portfolio {
-  padding: 64px 20vw;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: darkcyan;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#image-rabbit {
-  width: 80px;
-}
-
-#image-hamburger {
-  width: 20px;
-  margin-top: calc(45px/4);
-  margin-left: 1vw;
 }
 
 .gallery {
@@ -281,12 +253,67 @@ h1.text-intro {
   color: white;
 }
 
+#portfolio-container {
+  display: relative;
+  width: 50%;
+}
+#portfolio-container img {
+  opacity: 1;
+  display: absolute;
+  width: 100%;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+#portfolio-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #1d1d1B;
+}
+#portfolio-container .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 900;
+  color: #fff;
+}
+
+#portfolio-container:hover img {
+  opacity: 0.8;
+}
+
+#portfolio-container:hover .overlay {
+  opacity: 0.9;
+}
+
+#image-rabbit {
+  width: 80px;
+}
+
+#image-hamburger {
+  width: 20px;
+  margin-top: calc(45px/4);
+  margin-left: 1vw;
+}
+
 @media only screen and (max-width: 600px) {
   #menu-nav {
     display: none;
   }
 
   #view-main.sidebar-active {
+    width: calc(100vw - 270px);
     height: 100vh;
     overflow: hidden;
   }

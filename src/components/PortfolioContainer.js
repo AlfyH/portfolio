@@ -4,12 +4,10 @@ class PortfolioContainer extends Component {
     render() {
         return (
             <div id="portfolio-container">
-                <div>
                     <img src={this.props.image} alt ="opts.img"></img>
-                    <div className="inner-div">
-                        {this.props.text}
+                    <div className="overlay">
+                    <div className="text">{this.props.text}</div>
                     </div>
-                </div>
             </div>
         );
     }

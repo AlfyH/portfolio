@@ -1,0 +1,28 @@
+#page-home {
+  background: url("../assets/several-circles.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height: 100vh;
+}
+
+h1.text-intro{
+    color: white;
+    text-align: center;
+}
+
+#page-home-text {
+    background: url("../assets/background-text.svg") no-repeat center center fixed; 
+    background-size: 300px,300px;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+#page-home-text:hover {
+    background: url("../assets/background-text.svg") no-repeat center center fixed; 
+    background-size: 400px,400px;
+  height: 100vh;
+  padding-top: 30vh;
+  transition: 0.5s;
+}

@@ -1,0 +1,77 @@
+#menu-side{
+    height: #{$menu-height};
+    background-color: black;
+    
+    display: flex;
+}
+
+#menu-top{
+    padding-top: 20px;
+    height: #{$menu-height};
+    display: flex;
+}
+
+#menu.sidebar-active.sticky{
+    display: none;
+}
+
+#menu-hamburger-cont{
+    opacity: 0;
+    transition-duration:0.5s;
+}
+
+#menu-hamburger-cont.sticky{
+    opacity: 1;
+    transition-duration:0.5s;
+}
+
+#menu-hamburger-cont.sidebar-active{
+    opacity: 0;
+    transition-duration:0.3s;
+    visibility: hidden;
+}
+
+#menu-hamburger{
+    height: #{$menu-height}; 
+}
+
+#menu-nav {
+    font-family: 'TitilliumWeb-Regular';
+    font-size: 1.4em;
+    // margin-top: calc(#{$menu-height}/6);
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    opacity: 1;
+    transition-duration:0.5s;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline;
+        padding: 0 30px;
+        a {
+            color: #{$ragin-beige};
+        }
+    }
+}
+
+#menu-nav.sidebar-active{
+    opacity: 0;
+}
+
+#menu-nav.sticky{
+    opacity: 0;
+    transition-duration:0.5s;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+#menu-side.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+}

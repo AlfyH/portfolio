@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from './components/Sidebar'
-import Main from './views/Main'
+import Main from './js/views/Main'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import tools from './functions/tools.js'
 
