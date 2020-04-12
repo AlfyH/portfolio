@@ -2,28 +2,35 @@
     /* don't forget to add all the previously mentioned styles here too */
     background: rgb(242,243,247);
     transition: all 0.7s;
-    margin-left: -250px;
+    margin-left: calc(1px - #{$sidebar-width});
     height: 100vh;
     width: #{$sidebar-width};
+    border-right: thin #979797 solid;
+    // border-width: 0.2px;
+    // border-style: solid;
     
-    .sidebar-header {
-        margin: 20px auto 0 auto;
-        width: 80px;
+    #sidebar-header {
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-top: 18vh;
     }
 
-    ul.components {
-        padding: 20px 0;
-        border-bottom: 1px solid #47748b;
-    }
-
-    ul p {
-        padding: 10px;
+    ul#sidebar-nav {
+        width: 100%;
+        margin-top: 48px;
+        list-style-type: none;
+        padding-inline-start: 0;
+        margin-top: 12vh;
     }
 
     ul li a {
-        padding: 10px;
         font-size: 1.1em;
+        font-family: "TitilliumWeb-SemiBold";
         display: block;
+        color: black;
+        padding-top: 11px;
+        text-align: center;
     }
 
     ul li a:hover {

@@ -1,28 +1,69 @@
 #page-home {
-  background: url("../assets/several-circles.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  // background: url("../assets/several-circles.jpg") no-repeat center center fixed; 
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
     height: 100vh;
+    width: 100vw;
 }
 
-h1.text-intro{
-    color: white;
-    text-align: center;
+#rabbit-hero-cont{
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - #{$menu-height});
 }
 
-#page-home-text {
-    background: url("../assets/background-text.svg") no-repeat center center fixed; 
-    background-size: 300px,300px;
-    height: 100vh;
-    transition: 0.5s;
+#rabbit-hero {
+  position:absolute;
+  left:0;
+  bottom:0;
+  height: 80vh;
+  width: auto;
+  max-height: 500px;
 }
 
-#page-home-text:hover {
-    background: url("../assets/background-text.svg") no-repeat center center fixed; 
-    background-size: 400px,400px;
-  height: 100vh;
-  padding-top: 30vh;
-  transition: 0.5s;
+#text-hero-cont {
+  width: 100vw;
+  position: absolute;
+  left:0;
+  bottom:35vh;
+  // background-color: black;
 }
+
+#text-hero-name{
+  text-align: center;
+  font-family: "TitilliumWeb-Bold";
+  font-size: 3em;
+  color: white;
+  margin-bottom: 0;
+}
+#text-hero-sub{
+  text-align: center;
+  font-family: "TitilliumWeb-Light";
+  font-size: 2em;
+  color: white;
+}
+
+#text-hero-cont.sidebar-active {
+  // width:10vw;
+}
+// h1.text-intro{
+//     color: white;
+//     text-align: center;
+// }
+
+// #page-home-text {
+//     background: url("../assets/background-text.svg") no-repeat center center fixed; 
+//     background-size: 300px,300px;
+//     height: 100vh;
+//     transition: 0.5s;
+// }
+
+// #page-home-text:hover {
+//   background: url("../assets/background-text.svg") no-repeat center center fixed; 
+//   background-size: 400px,400px;
+//   height: 100vh;
+//   padding-top: 30vh;
+//   transition: 0.5s;
+// }

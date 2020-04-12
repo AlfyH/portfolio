@@ -7,24 +7,24 @@ export default class Sidebar extends Component {
         return (
             <nav id="sidebar">
                 <SideBarToggle tools={this.props.tools}></SideBarToggle>
-                <div class="sidebar-header">
-                    <img id="image-rabbit" src= {rabbit} alt="rabbit.png"></img>
-                </div>
-                <ul class="list-unstyled components">
-                    <p>Alfy Hushairi</p>
-                    <li class="active">
-                        <a href="#1" onClick={this.props.tools.toggleSidebar}>Home</a>
+                <ul id="sidebar-nav">
+                    <li>
+                        <a href="#1" onClick={this.props.tools.toggleSidebar}>home</a>
                     </li>
                     <li>
-                        <a href="#2" onClick={this.props.tools.toggleSidebar}>About</a>
+                        <a href="#2" onClick={this.props.tools.toggleSidebar}>aboutMe</a>
                     </li>
                     <li>
-                        <a href="#3" onClick={this.props.tools.toggleSidebar}>Portfolio</a>
+                        <a href="#3" onClick={this.props.tools.toggleSidebar}>portfolio</a>
                     </li>
                     <li>
-                        <a href="#4" onClick={this.props.tools.toggleSidebar}>Contact</a>
+                        <a href="#4" onClick={this.props.tools.toggleSidebar}>contactMe</a>
                     </li>
                 </ul>
+                <div id="sidebar-header">
+                    <img id="image-rabbit" src={rabbit} alt="rabbit.png"></img>
+                    <p>Alfy Hushairi</p>
+                </div>
             </nav>
         )
     }

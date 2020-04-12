@@ -1,7 +1,6 @@
 #menu-side{
     height: #{$menu-height};
     background-color: black;
-    
     display: flex;
 }
 
@@ -59,7 +58,7 @@
 }
 
 #menu-nav.sidebar-active{
-    opacity: 0;
+    // opacity: 0;
 }
 
 #menu-nav.sticky{

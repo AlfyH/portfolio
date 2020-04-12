@@ -4,27 +4,42 @@ import About from '../../pages/About';
 import Portfolio from '../../pages/Portfolio';
 import FullImage from '../../pages/FullImage';
 import Contact from '../../pages/Contact';
+import Modal from '../views/Modal';
+
+
 // import MenuSide from '../components/MenuSide';
 
 
 export default class Main extends Component {
 
-    constructor(props) {
-        super(props);
-        console.log(props);
+    constructor() {
+        super();
+        this.state = {
+            modalText: "oldText"
+        };
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick() {
+        this.setState({
+            modalText: "newText"
+        });
     }
 
     render() {
         return (
             <div id="view-main">
+                <Modal></Modal>
                 <div id="main-content">
                     <Home tools={this.props.tools}></Home>
                     {/* <MenuSide tools={this.props.tools}></MenuSide> */}
                     <div id="main-content-after-menu">
                         <About tools ={this.props.tools}></About>
-                        <Portfolio></Portfolio>
+                        <Portfolio tools={this.props.tools}
+                        modalText = {this.state.modalText}
+                        />
                         <FullImage></FullImage>
                         <Contact></Contact>
+
                     </div>
                 </div>
             </div>

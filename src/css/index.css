@@ -20,10 +20,12 @@ code {
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat";
+  font-weight: 200;
   font-size: 1.1em;
+  text-align: center;
+  color: black;
   line-height: 1.7em;
-  color: #1d1d1B;
 }
 
 a, a:hover, a:focus {
@@ -53,43 +55,121 @@ a, a:hover, a:focus {
 
 #view-main.sidebar-active {
   overflow-x: hidden;
-  transform: translate(270px, 0);
   transition-duration: 0.7s;
 }
 
-#page-portfolio {
-  padding: 64px 20vw;
-  min-width: 100vw;
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
   background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
-#page-home {
-  background: url("../assets/several-circles.jpg") no-repeat center center fixed;
+/* Modal Content/Box */
+#modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#page-portfolio {
+  padding: 1vh 0;
+  min-width: 100vw;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  background-color: #101010;
 }
 
-h1.text-intro {
-  color: white;
+.grid-cont {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10vh 7vw;
+}
+
+.grid-item {
+  margin: 0.5em;
   text-align: center;
 }
 
-#page-home-text {
-  background: url("../assets/background-text.svg") no-repeat center center fixed;
-  background-size: 300px, 300px;
-  height: 100vh;
-  transition: 0.5s;
+.port-img {
+  width: 100%;
 }
 
-#page-home-text:hover {
-  background: url("../assets/background-text.svg") no-repeat center center fixed;
-  background-size: 400px, 400px;
+#page-home {
   height: 100vh;
-  padding-top: 30vh;
-  transition: 0.5s;
+  width: 100vw;
+}
+
+#rabbit-hero-cont {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 45px);
+}
+
+#rabbit-hero {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80vh;
+  width: auto;
+  max-height: 500px;
+}
+
+#text-hero-cont {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 35vh;
+}
+
+#text-hero-name {
+  text-align: center;
+  font-family: "TitilliumWeb-Bold";
+  font-size: 3em;
+  color: white;
+  margin-bottom: 0;
+}
+
+#text-hero-sub {
+  text-align: center;
+  font-family: "TitilliumWeb-Light";
+  font-size: 2em;
+  color: white;
 }
 
 #page-about {
@@ -98,18 +178,31 @@ h1.text-intro {
   background-color: #f3f0ed;
 }
 
+.header {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 3.5em;
+  text-align: center;
+  color: #222;
+}
+
 .pagePadding {
-  padding: 64px 15vw;
+  padding: 10vh 13vw;
 }
 
 #page-contact {
-  min-height: 100vh;
+  min-height: calc(100vh - 90px);
   max-width: 100vw;
-  background-color: #f3f0ed;
+  background-color: #2F1628;
+}
+
+#footer {
+  height: 90px;
+  background-color: black;
 }
 
 #full-image {
-  background: url("../assets/me-bw.png") no-repeat center center fixed;
+  background: url("../assets/me-bw.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -121,25 +214,31 @@ h1.text-intro {
   /* don't forget to add all the previously mentioned styles here too */
   background: #f2f3f7;
   transition: all 0.7s;
-  margin-left: -250px;
+  margin-left: calc(1px - 150px);
   height: 100vh;
-  width: 270px;
+  width: 150px;
+  border-right: thin #979797 solid;
 }
-#sidebar .sidebar-header {
-  margin: 20px auto 0 auto;
-  width: 80px;
+#sidebar #sidebar-header {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 18vh;
 }
-#sidebar ul.components {
-  padding: 20px 0;
-  border-bottom: 1px solid #47748b;
-}
-#sidebar ul p {
-  padding: 10px;
+#sidebar ul#sidebar-nav {
+  width: 100%;
+  margin-top: 48px;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-top: 12vh;
 }
 #sidebar ul li a {
-  padding: 10px;
   font-size: 1.1em;
+  font-family: "TitilliumWeb-SemiBold";
   display: block;
+  color: black;
+  padding-top: 11px;
+  text-align: center;
 }
 #sidebar ul li a:hover {
   color: #7386D5;
@@ -208,10 +307,6 @@ h1.text-intro {
 }
 #menu-nav li a {
   color: #fff5d7;
-}
-
-#menu-nav.sidebar-active {
-  opacity: 0;
 }
 
 #menu-nav.sticky {
@@ -298,7 +393,7 @@ h1.text-intro {
 }
 
 #image-rabbit {
-  width: 80px;
+  width: 65px;
 }
 
 #image-hamburger {
@@ -313,7 +408,7 @@ h1.text-intro {
   }
 
   #view-main.sidebar-active {
-    width: calc(100vw - 270px);
+    width: calc(100vw - 150px);
     height: 100vh;
     overflow: hidden;
   }
@@ -321,6 +416,87 @@ h1.text-intro {
   .app-wrapper {
     background-color: black;
   }
+
+  #rabbit-hero {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 50vw;
+    max-height: 500px;
+    max-width: 500px;
+  }
 }
+@media only screen and (max-width: 1024px) {
+  #full-image {
+    background: url("../assets/me-bw.jpg") no-repeat;
+    background-size: 100% auto;
+    height: 30vh;
+  }
+
+  .header {
+    font-size: 2.5em;
+  }
+
+  #text-hero-name {
+    font-size: 2.5em;
+  }
+
+  #text-hero-sub {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .pagePadding {
+    padding: 20vh 20vw;
+  }
+}
+@media (min-height: 800px) {
+  #text-hero-cont {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 49vh;
+  }
+
+  #text-hero-name {
+    text-align: center;
+    font-family: "TitilliumWeb-Bold";
+    font-size: 4em;
+    color: white;
+    margin-bottom: 0;
+  }
+
+  #text-hero-sub {
+    text-align: center;
+    font-family: "TitilliumWeb-Light";
+    font-size: 3em;
+    color: white;
+  }
+}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
 
 /*# sourceMappingURL=index.css.map */
