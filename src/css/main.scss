@@ -9,8 +9,9 @@ $sleuthe-yellow:#feb300;
 $pink-leaf: #ffaaab;
 $main-font: #2f1628;
 
-$sidebar-width: 270px;
+$sidebar-width: 150px;
 $menu-height: 45px;
+$footer-height: 90px;
 
 //General
 .app-wrapper {
@@ -19,7 +20,7 @@ $menu-height: 45px;
 }
 
 body {
-        overflow-x: hidden;
+    overflow-x: hidden;
     color: #{$main-font};
     margin: 0;
     font-family: 'Titillium Web','Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -35,10 +36,12 @@ code {
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Montserrat";
+    font-weight: 200;
     font-size: 1.1em;
+    text-align: center;
+    color: black;
     line-height: 1.7em;
-    color:#1d1d1B;
 }
 
 a, a:hover, a:focus {
@@ -64,6 +67,7 @@ a, a:hover, a:focus {
 
 //Screens
 @import './views/mainview.scss';
+@import './views/modal.scss';
 
 //Pages
 @import './pages/portfolio.scss';

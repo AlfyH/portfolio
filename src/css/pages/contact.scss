@@ -1,7 +1,26 @@
 #page-contact {
-    min-height: 100vh;
+    min-height: calc(100vh - #{$footer-height});
     max-width: 100vw;
-    background-color: #f3f0ed;
+    background-color: #2F1628;
     //   background: url("../assets/contact.jpg") no-repeat center center fixed; 
 //   background-size: contain;
+}
+
+// #rabbit-hero-cont{
+//   position: relative;
+//   width: 100vw;
+//   height: calc(100vh - #{$menu-height});
+// }
+
+// #rabbit-hero {
+// //   position:absolute;
+//   left:0;
+//   bottom:0;
+//   height: 30vh;
+//   width: auto;
+// }
+
+#footer {
+    height: #{$footer-height};
+    background-color: black;
 }

@@ -1,6 +1,28 @@
 
 #page-portfolio {
-    padding: 64px 20vw;
+    padding: 1vh 0;
     min-width: 100vw;
-    background-color: black;
+//   background: url("../assets/port-bg.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    background-color: #101010;
+}
+
+.grid-cont{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10vh 7vw;
+}
+
+.grid-item{
+  margin: 0.5em;
+  // font-size: 30px;
+  text-align: center;
+
+}
+
+.port-img{
+    width: 100%;
 }
