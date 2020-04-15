@@ -24,60 +24,51 @@ export default class Portfolio extends Component {
     render() {
         return (
             <section id="3">
-                <div id = "page-portfolio">
+                <div onClick={this.props.tools.toggleSidebarMain}  id = "page-portfolio">
                         {/* <div>
                         <button id="myBtn" onClick={this.openModal}>press</button>
                         </div> */}
                     <div className="grid-cont">
                         <div className ="grid-item">
                             <img className="port-img" src={design}></img>
-                            {/* <h1 style={{fontFamily:"Titillium-Bold", fontSize:"1rem", color:"white"}}>Design</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img"src={prototype}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Prototype</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={develop}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={five}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={quad}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={six}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={seven}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={eight}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={nine}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={ten}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={eleven}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                         <div className="grid-item">
                             <img className="port-img" src={twelve}></img>
-                            {/* <h1 style={{ fontFamily: "Titillium-Bold", fontSize: "1rem", color: "white" }}>Develop</h1> */}
                         </div>
                     </div>
+                    <p style={{color:"white",marginBottom:"60px"}}>
+                         This website was designed in Sketch and developed with React
+                    </p>
                 </div>
             </section>
         );
