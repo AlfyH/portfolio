@@ -14,6 +14,17 @@ function toggleSidebar() {
     $('#text-hero-cont').toggleClass('sidebar-active');
 };
 
+function toggleSidebarMain() {
+    if (document.getElementById("sidebar").classList.contains("sidebar-active")){
+        $('#sidebar').toggleClass('sidebar-active');
+        $('#view-main').toggleClass('sidebar-active');
+        $('#menu-hamburger-cont').toggleClass('sidebar-active').toggleClass('fadeout');
+        $('#menu-side').toggleClass('sidebar-active');
+        $('#menu-nav').toggleClass('sidebar-active');
+        $('#text-hero-cont').toggleClass('sidebar-active');
+    }
+};
+
 function stickyNavbar(sticky, navbar) {
 if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
@@ -69,5 +80,6 @@ export default tools = {
     toggleSidebar: toggleSidebar,
     stickyNavbar: stickyNavbar,
     smoothScrolling: smoothScrolling,
-    openModal: openModal
+    openModal: openModal,
+    toggleSidebarMain: toggleSidebarMain
  };

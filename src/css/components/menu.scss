@@ -2,6 +2,7 @@
     height: #{$menu-height};
     background-color: black;
     display: flex;
+    z-index: 100;
 }
 
 #menu-top{
@@ -31,11 +32,15 @@
 }
 
 #menu-hamburger{
-    height: #{$menu-height}; 
+    height: #{$menu-height};
+    :hover{
+        cursor: pointer;
+    }
 }
 
 #menu-nav {
-    font-family: 'TitilliumWeb-Regular';
+    font-family: 'Roboto';
+    font-weight: 300;
     font-size: 1.4em;
     // margin-top: calc(#{$menu-height}/6);
     margin-left: auto;
@@ -58,7 +63,7 @@
 }
 
 #menu-nav.sidebar-active{
-    // opacity: 0;
+    opacity: 0;
 }
 
 #menu-nav.sticky{

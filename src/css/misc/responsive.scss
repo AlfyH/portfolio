@@ -1,6 +1,11 @@
 @media only screen and (max-width: 600px) {
     #menu-nav{
-        display: none;
+        // display: none;
+            font-size: 1.1em;
+        li {
+        display: inline;
+        padding: 0 10px;
+        }
     }
     
     #view-main.sidebar-active {
@@ -11,28 +16,29 @@
     .app-wrapper{
         background-color: black;
     }
-
-    #rabbit-hero {
-  position:absolute;
-  left:0;
-  bottom:0;
-  height: auto;
-  width: 50vw;
-  max-height: 500px;
-  max-width: 500px;
-}
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-height: 340px) {
+  #text-hero-cont {
+    bottom:20vh;
+  }
+  
+}
+
+@media only screen and (max-width: 1024px){
     #full-image {
         background: url("../assets/me-bw.jpg") no-repeat;
           background-size: 100% auto;
-            height: 30vh;
+            height: 60vw;
         // display: none;
     }
 
     .header {
   font-size: 2.5em;
+}
+
+p {
+  font-size: 1em;
 }
 
 #text-hero-name{
@@ -50,31 +56,6 @@
     }
     
 }
-
-@media (min-height: 800px) {
-#text-hero-cont {
-  width: 100vw;
-  position: absolute;
-  left:0;
-  bottom:49vh;
-}
-
-#text-hero-name{
-  text-align: center;
-  font-family: "TitilliumWeb-Bold";
-  font-size: 4em;
-  color: white;
-  margin-bottom: 0;
-}
-#text-hero-sub{
-  text-align: center;
-  font-family: "TitilliumWeb-Light";
-  font-size: 3em;
-  color: white;
-}
-    
-}
-
 
 
 /* 

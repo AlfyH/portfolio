@@ -18,7 +18,11 @@ var navbar = document.getElementById("menu-side");
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-window.onscroll = function () { tools.stickyNavbar(sticky, navbar) };
+window.onscroll = function () { 
+tools.stickyNavbar(sticky, navbar);
+ };
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

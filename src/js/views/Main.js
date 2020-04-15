@@ -12,8 +12,8 @@ import Modal from '../views/Modal';
 
 export default class Main extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             modalText: "oldText"
         };
@@ -25,6 +25,7 @@ export default class Main extends Component {
         });
     }
 
+    component
     render() {
         return (
             <div id="view-main">
@@ -38,7 +39,7 @@ export default class Main extends Component {
                         modalText = {this.state.modalText}
                         />
                         <FullImage></FullImage>
-                        <Contact></Contact>
+                        <Contact tools={this.props.tools}></Contact>
 
                     </div>
                 </div>

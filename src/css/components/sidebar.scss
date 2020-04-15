@@ -24,19 +24,26 @@
         margin-top: 12vh;
     }
 
+    .sidebar-name{
+            font-size: 1em;
+    }
+
     ul li a {
         font-size: 1.1em;
-        font-family: "TitilliumWeb-SemiBold";
+        font-family: "Roboto";
+        font-weight: 300;
         display: block;
         color: black;
         padding-top: 11px;
         text-align: center;
     }
 
-    ul li a:hover {
-        color: #7386D5;
-        background: #fff;
+        ul li a:active {
+        font-family: "Roboto";
+        font-weight: 400;
     }
+
+
 }
 
 #sidebar.sidebar-active {

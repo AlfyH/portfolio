@@ -5,6 +5,6 @@
 
 #view-main.sidebar-active {
     overflow-x: hidden;
-    // transform: translate( #{$sidebar-width}, 0);
+    transform: translate( #{$sidebar-width}, 0);
     transition-duration: 0.7s;
 }

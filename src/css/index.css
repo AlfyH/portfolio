@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap%22%20rel=%22stylesheet");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap%22%20rel=%22stylesheet");
 .app-wrapper {
   display: flex;
   align-items: stretch;
@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   color: #2f1628;
   margin: 0;
-  font-family: "Titillium Web", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,7 +22,7 @@ code {
 p {
   font-family: "Montserrat";
   font-weight: 200;
-  font-size: 1.1em;
+  font-size: 1.5em;
   text-align: center;
   color: black;
   line-height: 1.7em;
@@ -55,6 +55,7 @@ a, a:hover, a:focus {
 
 #view-main.sidebar-active {
   overflow-x: hidden;
+  transform: translate(150px, 0);
   transition-duration: 0.7s;
 }
 
@@ -133,12 +134,13 @@ a, a:hover, a:focus {
 #page-home {
   height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 #rabbit-hero-cont {
   position: relative;
   width: 100vw;
-  height: calc(100vh - 45px);
+  height: 100vh;
 }
 
 #rabbit-hero {
@@ -147,19 +149,19 @@ a, a:hover, a:focus {
   bottom: 0;
   height: 80vh;
   width: auto;
-  max-height: 500px;
+  max-width: 250px;
 }
 
 #text-hero-cont {
   width: 100vw;
   position: absolute;
   left: 0;
-  bottom: 35vh;
+  bottom: 40vh;
 }
 
 #text-hero-name {
   text-align: center;
-  font-family: "TitilliumWeb-Bold";
+  font-family: "Roboto";
   font-size: 3em;
   color: white;
   margin-bottom: 0;
@@ -167,7 +169,7 @@ a, a:hover, a:focus {
 
 #text-hero-sub {
   text-align: center;
-  font-family: "TitilliumWeb-Light";
+  font-family: "Roboto";
   font-size: 2em;
   color: white;
 }
@@ -176,6 +178,24 @@ a, a:hover, a:focus {
   display: inline-block;
   max-width: 100vw;
   background-color: #f3f0ed;
+}
+
+#contact-me {
+  display: block;
+  text-align: center;
+}
+#contact-me :hover {
+  font-weight: 200;
+}
+#contact-me p {
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  line-height: 1.7em;
 }
 
 .header {
@@ -191,14 +211,74 @@ a, a:hover, a:focus {
 }
 
 #page-contact {
-  min-height: calc(100vh - 90px);
+  height: 100vh;
+  min-height: 500px;
+  max-height: 600px;
   max-width: 100vw;
   background-color: #2F1628;
+  position: relative;
+}
+
+#rabbit-hero {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  height: auto;
+  width: 30vw;
 }
 
 #footer {
-  height: 90px;
+  height: 40px;
+  width: 100%;
+  position: absolute;
   background-color: black;
+  display: block;
+  text-align: center;
+  bottom: 0;
+}
+
+#logo-cont {
+  height: 100%;
+}
+#logo-cont img {
+  margin: 0 0.5em;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#contact-content-cont {
+  width: 100%;
+  text-align: center;
+}
+
+#contact-content {
+  display: grid;
+  grid-template-columns: auto 250px auto;
+}
+#contact-content .grid-item {
+  margin-top: 15vh;
+  text-align: center;
+}
+#contact-content h1 {
+  font-size: 2em;
+  font-family: "Roboto";
+  font-weight: 700;
+  color: white;
+  text-align: right;
+}
+#contact-content p {
+  font-size: 1.2em;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: white;
+  text-align: left;
 }
 
 #full-image {
@@ -232,17 +312,21 @@ a, a:hover, a:focus {
   padding-inline-start: 0;
   margin-top: 12vh;
 }
+#sidebar .sidebar-name {
+  font-size: 1em;
+}
 #sidebar ul li a {
   font-size: 1.1em;
-  font-family: "TitilliumWeb-SemiBold";
+  font-family: "Roboto";
+  font-weight: 300;
   display: block;
   color: black;
   padding-top: 11px;
   text-align: center;
 }
-#sidebar ul li a:hover {
-  color: #7386D5;
-  background: #fff;
+#sidebar ul li a:active {
+  font-family: "Roboto";
+  font-weight: 400;
 }
 
 #sidebar.sidebar-active {
@@ -255,6 +339,7 @@ a, a:hover, a:focus {
   height: 45px;
   background-color: black;
   display: flex;
+  z-index: 100;
 }
 
 #menu-top {
@@ -286,9 +371,13 @@ a, a:hover, a:focus {
 #menu-hamburger {
   height: 45px;
 }
+#menu-hamburger :hover {
+  cursor: pointer;
+}
 
 #menu-nav {
-  font-family: "TitilliumWeb-Regular";
+  font-family: "Roboto";
+  font-weight: 300;
   font-size: 1.4em;
   margin-left: auto;
   margin-right: auto;
@@ -307,6 +396,10 @@ a, a:hover, a:focus {
 }
 #menu-nav li a {
   color: #fff5d7;
+}
+
+#menu-nav.sidebar-active {
+  opacity: 0;
 }
 
 #menu-nav.sticky {
@@ -404,7 +497,11 @@ a, a:hover, a:focus {
 
 @media only screen and (max-width: 600px) {
   #menu-nav {
-    display: none;
+    font-size: 1.1em;
+  }
+  #menu-nav li {
+    display: inline;
+    padding: 0 10px;
   }
 
   #view-main.sidebar-active {
@@ -416,26 +513,25 @@ a, a:hover, a:focus {
   .app-wrapper {
     background-color: black;
   }
-
-  #rabbit-hero {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: auto;
-    width: 50vw;
-    max-height: 500px;
-    max-width: 500px;
+}
+@media only screen and (max-height: 340px) {
+  #text-hero-cont {
+    bottom: 20vh;
   }
 }
 @media only screen and (max-width: 1024px) {
   #full-image {
     background: url("../assets/me-bw.jpg") no-repeat;
     background-size: 100% auto;
-    height: 30vh;
+    height: 60vw;
   }
 
   .header {
     font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1em;
   }
 
   #text-hero-name {
@@ -449,29 +545,6 @@ a, a:hover, a:focus {
 @media (min-width: 1200px) {
   .pagePadding {
     padding: 20vh 20vw;
-  }
-}
-@media (min-height: 800px) {
-  #text-hero-cont {
-    width: 100vw;
-    position: absolute;
-    left: 0;
-    bottom: 49vh;
-  }
-
-  #text-hero-name {
-    text-align: center;
-    font-family: "TitilliumWeb-Bold";
-    font-size: 4em;
-    color: white;
-    margin-bottom: 0;
-  }
-
-  #text-hero-sub {
-    text-align: center;
-    font-family: "TitilliumWeb-Light";
-    font-size: 3em;
-    color: white;
   }
 }
 /* 

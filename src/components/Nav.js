@@ -5,17 +5,17 @@ class Nav extends Component {
         return (
             <div id="menu-nav">
                 <ul>
+                    {/* <li>
+                        <a href="#1" style={{fontWeight:"500"}}>home</a>
+                    </li> */}
                     <li>
-                        <a href="#1">home</a>
-                    </li>
-                    <li>
-                        <a href="#2">aboutUs</a>
+                        <a href="#2">aboutMe</a>
                     </li>
                     <li>
                         <a href="#3">portfolio</a>
                     </li>
                     <li>
-                        <a href="#4">contactUs</a>
+                        <a href="#4">contactMe</a>
                     </li>
                 </ul>
             </div>

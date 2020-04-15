@@ -1,9 +1,10 @@
 #page-contact {
-    min-height: calc(100vh - #{$footer-height});
+    height: 100vh;
+    min-height: 500px;
+    max-height: 600px;
     max-width: 100vw;
     background-color: #2F1628;
-    //   background: url("../assets/contact.jpg") no-repeat center center fixed; 
-//   background-size: contain;
+    position: relative;
 }
 
 // #rabbit-hero-cont{
@@ -12,15 +13,64 @@
 //   height: calc(100vh - #{$menu-height});
 // }
 
-// #rabbit-hero {
-// //   position:absolute;
-//   left:0;
-//   bottom:0;
-//   height: 30vh;
-//   width: auto;
-// }
+#rabbit-hero {
+  position:absolute;
+  left:0;
+  bottom: 40px;
+  height: auto;
+  width: 30vw;
+}
 
 #footer {
     height: #{$footer-height};
+    width: 100%;
+    position: absolute;
     background-color: black;
+    display: block;
+    text-align: center;
+    bottom: 0;
+}
+
+#logo-cont{
+        height: 100%;
+    img{
+        margin: 0 0.5em;
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#contact-content-cont{
+    width: 100%;
+    text-align: center;
+}
+
+#contact-content{
+  display: grid;
+  grid-template-columns: auto 250px auto;
+  .grid-item{
+    margin-top: 15vh;
+     text-align: center;
+    }
+    h1{
+        font-size: 2em;
+        font-family:"Roboto";
+        font-weight: 700;
+        color: white;
+        text-align: right; 
+    }
+    p {
+        font-size: 1.2em;
+        font-family:"Roboto";
+        font-weight: 300;
+        color: white;
+        text-align: left; 
+    }
 }

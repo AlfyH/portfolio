@@ -6,12 +6,13 @@
   // background-size: cover;
     height: 100vh;
     width: 100vw;
+      position: relative;
 }
 
 #rabbit-hero-cont{
   position: relative;
   width: 100vw;
-  height: calc(100vh - #{$menu-height});
+  height: 100vh;
 }
 
 #rabbit-hero {
@@ -20,27 +21,27 @@
   bottom:0;
   height: 80vh;
   width: auto;
-  max-height: 500px;
+  // max-height: 200px;
+  max-width: 250px;
 }
 
 #text-hero-cont {
   width: 100vw;
   position: absolute;
   left:0;
-  bottom:35vh;
-  // background-color: black;
+  bottom:40vh;
 }
 
 #text-hero-name{
   text-align: center;
-  font-family: "TitilliumWeb-Bold";
+  font-family: "Roboto";
   font-size: 3em;
   color: white;
   margin-bottom: 0;
 }
 #text-hero-sub{
   text-align: center;
-  font-family: "TitilliumWeb-Light";
+  font-family: "Roboto";
   font-size: 2em;
   color: white;
 }

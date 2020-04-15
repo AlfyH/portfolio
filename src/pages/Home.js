@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
         return (
             <section id="1">
-                <div id = "page-home">
+                <div onClick={this.props.tools.toggleSidebarMain} id = "page-home">
                     <div id ="menu-top">
                         <Nav></Nav>
                     </div>

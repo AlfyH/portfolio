@@ -23,7 +23,7 @@ export default class Sidebar extends Component {
                 </ul>
                 <div id="sidebar-header">
                     <img id="image-rabbit" src={rabbit} alt="rabbit.png"></img>
-                    <p>Alfy Hushairi</p>
+                    <p className="sidebar-name">Alfy Hushairi</p>
                 </div>
             </nav>
         )
