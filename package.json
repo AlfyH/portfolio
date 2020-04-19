@@ -1,6 +1,6 @@
 {
-  "homepage": "http://alfyh.github.io/portfolio",
-  "name": "my-portfolio",
+  "homepage": "http://alfy-portfolio.herokuapp.com/",
+  "name": "alfy-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
