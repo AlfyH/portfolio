@@ -4,6 +4,7 @@
   // -moz-background-size: cover;
   // -o-background-size: cover;
   // background-size: cover;
+  background-color: black;
     height: 100vh;
     width: 100vw;
       position: relative;
@@ -18,12 +19,14 @@
 #rabbit-hero {
   position:absolute;
   left:0;
-  bottom:0;
-  height: 80vh;
-  width: auto;
+  bottom:45px;
+  height: auto;
+  width: 30vw;
   // max-height: 200px;
   max-width: 250px;
 }
+
+
 
 #text-hero-cont {
   width: 100vw;

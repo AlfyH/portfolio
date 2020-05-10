@@ -14,6 +14,11 @@ $menu-height: 45px;
 $footer-height: 40px;
 
 //General
+
+video::-webkit-media-controls {
+    display:none !important;
+}
+
 .app-wrapper {
     display: flex;
     align-items: stretch;
@@ -51,7 +56,7 @@ a, a:hover, a:focus {
 }
 
 #main-content{
-      background-color: black;
+      background-color: #f3f0ed;
 }
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 #main-content-after-menu.sticky {

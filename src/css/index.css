@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap%22%20rel=%22stylesheet");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap%22%20rel=%22stylesheet");
+video::-webkit-media-controls {
+  display: none !important;
+}
+
 .app-wrapper {
   display: flex;
   align-items: stretch;
@@ -35,7 +39,7 @@ a, a:hover, a:focus {
 }
 
 #main-content {
-  background-color: black;
+  background-color: #f3f0ed;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -132,6 +136,7 @@ a, a:hover, a:focus {
 }
 
 #page-home {
+  background-color: black;
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -146,9 +151,9 @@ a, a:hover, a:focus {
 #rabbit-hero {
   position: absolute;
   left: 0;
-  bottom: 0;
-  height: 80vh;
-  width: auto;
+  bottom: 45px;
+  height: auto;
+  width: 30vw;
   max-width: 250px;
 }
 
@@ -219,7 +224,7 @@ a, a:hover, a:focus {
   position: relative;
 }
 
-#rabbit-hero {
+#rabbit-hero-contact {
   position: absolute;
   left: 0;
   bottom: 40px;
@@ -337,7 +342,6 @@ a, a:hover, a:focus {
 
 #menu-side {
   height: 45px;
-  background-color: black;
   display: flex;
   z-index: 100;
 }
@@ -350,6 +354,7 @@ a, a:hover, a:focus {
 
 #menu.sidebar-active.sticky {
   display: none;
+  background-color: #f3f0ed;
 }
 
 #menu-hamburger-cont {
@@ -379,6 +384,7 @@ a, a:hover, a:focus {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 1.4em;
+  z-index: 1;
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
@@ -514,7 +520,7 @@ a, a:hover, a:focus {
     background-color: black;
   }
 }
-@media only screen and (max-height: 340px) {
+@media only screen and (max-height: 200px) {
   #text-hero-cont {
     bottom: 20vh;
   }
