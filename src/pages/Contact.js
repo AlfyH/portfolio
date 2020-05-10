@@ -12,7 +12,7 @@ class Contact extends Component {
                     {/* <div id="rabbit-hero-cont">
                         <img id="rabbit-hero" src={rabbithero} alt="rabbit-hero.png"></img>
                     </div> */}
-                    <img id="rabbit-hero-contact" src={rabbithero} alt="rabbit-hero.png"></img>
+                    <img id="rabbit-hero" src={rabbithero} alt="rabbit-hero.png"></img>
                     <div id="contact-content-cont">
                     <div id="contact-content">
                         <div className="grid-item">

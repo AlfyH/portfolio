@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav';
 import rabbithero from '../assets/rabbit-hero.png';
-import rabbitmov from '../assets/yellowRabbit.mov';
 
 class Home extends Component {
     render() {
@@ -12,8 +11,7 @@ class Home extends Component {
                         <Nav></Nav>
                     </div>
                     <div id="rabbit-hero-cont">
-                        {/* <img id="rabbit-hero" src={rabbithero} alt ="rabbit-hero.png"></img> */}
-                        <video id="rabbit-hero" src={rabbitmov} autoPlay loop muted playsInline></video>
+                        <img id="rabbit-hero" src={rabbithero} alt ="rabbit-hero.png"></img>
                     </div>
                     <div id="text-hero-cont">
                         <h1 id="text-hero-name">alfy hushairi</h1>

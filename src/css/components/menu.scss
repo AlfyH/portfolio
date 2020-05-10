@@ -1,5 +1,6 @@
 #menu-side{
     height: #{$menu-height};
+    background-color: black;
     display: flex;
     z-index: 100;
 }
@@ -12,7 +13,6 @@
 
 #menu.sidebar-active.sticky{
     display: none;
-    background-color: #f3f0ed;
 }
 
 #menu-hamburger-cont{
@@ -42,7 +42,6 @@
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 1.4em;
-      z-index: 1;
     // margin-top: calc(#{$menu-height}/6);
     margin-left: auto;
     margin-right: auto;
