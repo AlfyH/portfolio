@@ -21,7 +21,7 @@ class Contact extends Component {
                             <p style={{fontWeight:"400", marginBottom:"0", marginTop:"50px"}}> I’m Alfy Hushairi.
                             <br></br>
                                 A
-                                web developer,
+                                web developer
                                 currently working in
                                 London, UK.
                             </p>

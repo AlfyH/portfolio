@@ -39,10 +39,10 @@ export default class Portfolio extends Component {
                         <img src ={allfour} className = "image"/>
                         </a>
 
-                        <p>With Accedo, I have done extensive work on the All4 app by Channel 4 UK.
-                            We develop for platforms such as Amazon Fire TV, Samsung TV, Youview, Freeview and Playstation.
-                            The type of work around development of the app include UI, player and playback reliablity.</p>
-                        <p>With Accedo I have also worked in smaller capacties for other big brands.</p>
+                        <p>With Accedo, I have worked extensively on the All4 app created by Channel 4 UK.
+                            We develop applications for platforms such as Amazon Fire TV, Samsung TV, Youview, Freeview and Playstation.
+                            My work includes UI, player and playback reliability.</p>
+                        <p>Through Accedo I have had the opportunity to work with other big brands:</p>
 
                         <img src={alllogos} className="image"/>
                     </div>
