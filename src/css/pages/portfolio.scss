@@ -1,27 +1,53 @@
 
 #page-portfolio {
-    padding: 1vh 0;
-    min-width: 100vw;
+  padding: 1vh 0;
+  min-width: 100vw;
 //   background: url("../assets/port-bg.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-    background-color: #101010;
+  background-color: #101010;
+    .grid-cont{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 2vh 7vw;
+   }
+
+  .grid-item{
+    margin: 0.5em;
+    // font-size: 30px;
+    text-align: center;
+    .port-img {
+      width: 100%;
+    }
+  }
 }
 
-.grid-cont{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10vh 7vw;
+.accedo{
+  padding: 14vh 7vw;
+  p {
+      color: white;
+      line-height: 1.5em;
+      font-weight: 200;
+      font-family: "Montserrat";
+      margin-bottom: 3vh;
+  }
+    .image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30vw;
+      height: auto;
+      margin-bottom: 3vh;
+    }
+    .accedo-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 17vw;
+      height: auto;
+      margin-bottom: 3vh;
+    }
 }
 
-.grid-item{
-  margin: 0.5em;
-  // font-size: 30px;
-  text-align: center;
-}
-
-.port-img{
-    width: 100%;
-}

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import rabbithero from '../assets/rabbit-hero.png';
 import github from '../assets/githublogo.png';
 import linkedin from '../assets/linkedinlogo.png';
-import background from '../assets/contact-background.png';
 
 class Contact extends Component {
     render() {
@@ -20,7 +19,8 @@ class Contact extends Component {
                         </div>
                         <div className="grid-item">
                             <p style={{fontWeight:"400", marginBottom:"0", marginTop:"50px"}}> I’m Alfy Hushairi.
-                                A Singaporean 
+                            <br></br>
+                                A
                                 web developer,
                                 currently working in
                                 London, UK.
@@ -30,7 +30,7 @@ class Contact extends Component {
                                 or collaborations.
                             </p>
                             <p style={{ fontWeight: "300", marginBottom: "0", marginTop: "15px", color:"#FEB300" }}>
-                                    <span style={{ fontWeight: "500", marginRight: "2px",color:"white"}}>e</span> alfyhushairi@gmail.com
+                                    <span style={{ fontWeight: "500", marginRight: "2px", color: "white" }}>e</span> me@alfyhushairi.com
                             </p>
                         </div>
                     </div>

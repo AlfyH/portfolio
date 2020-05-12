@@ -12,9 +12,9 @@ class About extends Component {
 
                         <h1 className="header">get in touch</h1>
                         <p style={{ marginTop: "4.4vh" }}>
-                            I am a user experience enthusiast formerly trained in Mechatronics.
-                            I enjoy the process of designing, prototyping and developing physical installations
-                            and digital platforms - and I am ready to collaborate.
+                            I am a web developer formerly trained in Mechatronics. I started out my career in museums as an engineer
+                            and have since been doing adhoc museum integrations and equipment rental.
+                            I enjoy the process of designing, prototyping and developing web applications and physical installations - and I am ready to collaborate.
                         </p>
                         <p style={{ marginTop: "2.2vh" }}>
 
