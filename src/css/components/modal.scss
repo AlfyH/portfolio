@@ -1,0 +1,9 @@
+.component-modal {
+  background: #8C8;
+  position: absolute;
+  z-index: 2;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
