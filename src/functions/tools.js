@@ -1,9 +1,4 @@
 import $ from "jquery";
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
-import Modal from '../js/views/Modal'
-
-var tools = {};
 
 function toggleSidebar() {
     $('#sidebar').toggleClass('sidebar-active');
@@ -49,37 +44,59 @@ function smoothScrolling(){
     });
 };
 
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
-function openModal(modalText){
-    var modal = document.getElementById("myModal");
-    var modalCont = document.createElement("div");
-    modalCont.id = "modal-cont";
-    document.body.appendChild(modalCont);
-
-    ReactDOM.render(<Modal>
-        Modal
-    </Modal>, document.getElementById("modal-cont"));
-
-    var span = document.getElementsByClassName("close")[0];
-
-    modal.style.display = "block";
-    span.onclick = function () {
-        modal.style.display = "none";
-        document.body.removeChild(modalCont);
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-            document.body.removeChild(modalCont);
-        }
-    }
+function preventDefault(e) {
+  e.preventDefault();
 }
 
-export default tools = {
-    toggleSidebar: toggleSidebar,
-    stickyNavbar: stickyNavbar,
-    smoothScrolling: smoothScrolling,
-    openModal: openModal,
-    toggleSidebarMain: toggleSidebarMain
- };
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener(
+    "test",
+    null,
+    Object.defineProperty({}, "passive", {
+      get: function() {
+        supportsPassive = true;
+      },
+    })
+  );
+} catch (e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent =
+  "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+  window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener("DOMMouseScroll", preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+  window.removeEventListener("touchmove", preventDefault, wheelOpt);
+  window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
+}
+
+
+export default {
+  toggleSidebar,
+  stickyNavbar,
+  smoothScrolling,
+  toggleSidebarMain,
+  disableScroll,
+  enableScroll
+};
