@@ -15,17 +15,9 @@ import accedo from '../assets/accedo.png'
 import alllogos from '../assets/alllogs.png'
 
 
-export default ({ tools, setIsModalVisibility }) => {
+export default ({ tools, setIsModalVisibility, setCurrentModal }) => {
   return (
     <section id="3">
-      {/* <button
-        onClick={() => {
-          setIsModalVisibility(true);
-          tools.disableScroll();
-        }}
-      >
-        sdfsd
-      </button> */}
       <div onClick={tools.toggleSidebarMain} id="page-portfolio">
         <div className="accedo">
           <a
@@ -43,7 +35,15 @@ export default ({ tools, setIsModalVisibility }) => {
             <img src={allfour} className="image" />
           </a>
 
-          <p>
+          <p
+            // onClick={() => {
+            //   setIsModalVisibility(true);
+            //   setCurrentModal(<div>
+            //     fsdfsdf
+            //   </div>);
+            //   tools.disableScroll();
+            // }}
+          >
             With Accedo, I have worked extensively on the All4 app created by
             Channel 4 UK. We develop applications for platforms such as Amazon
             Fire TV, Samsung TV, Youview, Freeview and Playstation. My work
