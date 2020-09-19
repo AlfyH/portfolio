@@ -18,14 +18,14 @@ import alllogos from '../assets/alllogs.png'
 export default ({ tools, setIsModalVisibility }) => {
   return (
     <section id="3">
-      <button
+      {/* <button
         onClick={() => {
           setIsModalVisibility(true);
           tools.disableScroll();
         }}
       >
         sdfsd
-      </button>
+      </button> */}
       <div onClick={tools.toggleSidebarMain} id="page-portfolio">
         <div className="accedo">
           <a
