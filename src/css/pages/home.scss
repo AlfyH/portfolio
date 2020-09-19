@@ -1,73 +1,68 @@
 #page-home {
-  // background: url("../assets/several-circles.jpg") no-repeat center center fixed; 
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
-  background-color: black;
-    height: 100vh;
-    width: 100vw;
-      position: relative;
+  background-color: #222526;
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 30vh 40vh;
+    grid-template-areas: 
+    "topmenu"
+    "title"
+    "rabbit";
 }
 
 #rabbit-hero-cont{
-  position: relative;
+  grid-area: rabbit;
   width: 100vw;
-  height: 100vh;
+  max-width: 200px;
 }
 
 #rabbit-hero {
-  position:absolute;
-  left:0;
-  bottom:45px;
-  height: auto;
-  width: 30vw;
-  // max-height: 200px;
-  max-width: 250px;
+  height: 40vh;
+  width: auto;
 }
 
-
-
 #text-hero-cont {
+  grid-area: title;
   width: 100vw;
-  position: absolute;
-  left:0;
-  bottom:40vh;
+  margin-top: 15vh;
 }
 
 #text-hero-name{
   text-align: center;
   font-family: "Roboto";
-  font-size: 3em;
-  color: white;
-  margin-bottom: 0;
+  font-size: 4em;
+  color: rgb(176, 169, 159);
 }
 #text-hero-sub{
   text-align: center;
   font-family: "Roboto";
-  font-size: 2em;
-  color: white;
+  font-size: 3em;
+  color: rgb(176, 169, 159)
 }
 
-#text-hero-cont.sidebar-active {
-  // width:10vw;
+#menu-nav {
+    grid-area: topmenu;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.4em;
+    z-index: 1;
+    margin-top: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    opacity: 1;
+    transition-duration:0.5s;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline;
+        padding: 0 30px;
+        a {
+            color: #{$ragin-beige};
+        }
+    }
 }
-// h1.text-intro{
-//     color: white;
-//     text-align: center;
-// }
-
-// #page-home-text {
-//     background: url("../assets/background-text.svg") no-repeat center center fixed; 
-//     background-size: 300px,300px;
-//     height: 100vh;
-//     transition: 0.5s;
-// }
-
-// #page-home-text:hover {
-//   background: url("../assets/background-text.svg") no-repeat center center fixed; 
-//   background-size: 400px,400px;
-//   height: 100vh;
-//   padding-top: 30vh;
-//   transition: 0.5s;
-// }

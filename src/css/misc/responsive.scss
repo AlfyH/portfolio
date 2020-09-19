@@ -19,10 +19,6 @@
 }
 
 @media only screen and (max-height: 200px) {
-  #text-hero-cont {
-    bottom:20vh;
-  }
-  
 }
 
 @media only screen and (max-width: 1024px){
@@ -41,8 +37,11 @@ p {
   font-size: 1em;
 }
 
+#text-hero-cont {
+  margin-top: 6vh;
+}
 #text-hero-name{
-  font-size: 2.5em;
+  font-size: 2.5em; 
 }
 #text-hero-sub{
   font-size: 1.5em;

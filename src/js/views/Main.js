@@ -11,6 +11,7 @@ import Modal from "../../components/Modal";
 
 export default ({ tools }) => {
     const [isModalVisible, setIsModalVisibility] = useState(false);
+    const [currentModal, setCurrentModal] = useState(<div />);
     
     return (
       <div id="view-main">
@@ -18,6 +19,7 @@ export default ({ tools }) => {
           isModalVisible={isModalVisible}
           modalToRender={<div>dfsdfsdf</div>}
           setIsModalVisibility={setIsModalVisibility}
+          currentModal={currentModal}
           tools={tools}
         />
         <div id="main-content">
@@ -28,6 +30,7 @@ export default ({ tools }) => {
             <Portfolio
               tools={tools}
               setIsModalVisibility={setIsModalVisibility}
+              setCurrentModal={setCurrentModal}
             />
             <FullImage />
             <Contact tools={tools} />

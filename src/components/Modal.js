@@ -1,26 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import $ from 'jquery';
 
-const Modal = ({ isModalVisible, modalToRender, setIsModalVisibility, tools }) => {
-  const [ currentModal, setCurrentModal] = useState(<div/>);
-
+const Modal = ({ isModalVisible, currentModal, setIsModalVisibility, tools }) => {
   useEffect(() => {
     setIsModalVisibility(isModalVisible);
-    setCurrentModal(modalToRender);
-  }, [modalToRender, isModalVisible, setIsModalVisibility]);
-
+  }, [isModalVisible, setIsModalVisibility]);
 
   const renderModal = () => {
     return (
-      <div 
-        className="component-modal"
-        style={{ marginTop: $(window).scrollTop()}}
-        >
+      <div
+        className={"component-modal"}
+        style={{
+          marginTop: $(window).scrollTop(),
+        }}
+      >
         {currentModal}
-        <button onClick={() => {
-          setIsModalVisibility(false);
-          tools.enableScroll();
-          }}>Close Modal</button>
+        <p style={{ color:"white"}}
+          onClick={() => {
+            setIsModalVisibility(false);
+            tools.enableScroll();
+          }}
+        >
+          x Close
+        </p>
       </div>
     );
   };
