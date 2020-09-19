@@ -1,19 +1,83 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
+import Empty from '../components/Empty';
 
-import prototype from '../assets/prototype.png'
-import design from '../assets/design.png'
-import quad from '../assets/quad.gif'
-import five from '../assets/5.png'
-import six from '../assets/6.png'
-import eight from '../assets/8.png'
-import nine from '../assets/9.png'
-import ten from '../assets/10.png'
-import eleven from '../assets/11.png'
-import twelve from '../assets/12.png'
+import one from '../assets/prototype.png'
+import two from '../assets/design.png'
+import three from '../assets/quad.gif'
+import four from '../assets/5.png'
+import five from '../assets/6.png'
+import six from '../assets/8.png'
+import seven from '../assets/9.png'
+import eight from '../assets/10.png'
+import nine from '../assets/11.png'
+import ten from '../assets/12.png'
 import allfour from '../assets/All4.png'
 import accedo from '../assets/accedo.png'
 import alllogos from '../assets/alllogs.png'
 
+const imageArray = [
+  {
+    image: one,
+    modalContent: <Empty
+    title="1"
+    />
+  },
+  {
+    image:two,
+    modalContent: <Empty
+    title="2"
+    />
+  },
+  {
+    image:three,
+    modalContent: <Empty
+    title="3"
+    />
+  },
+  {
+    image:four,
+    modalContent: <Empty
+    title="4"
+    />
+  },
+  {
+    image:five,
+    modalContent: <Empty
+    title="5"
+    />
+  },
+  {
+    image:six,
+    modalContent: <Empty 
+    title="6"
+    />
+  },
+  {
+    image:seven,
+    modalContent: <Empty 
+    title="7"
+    />
+  },
+  {
+    image:eight,
+    modalContent: <Empty
+    title="8"
+    />
+  },
+  {
+    image:nine,
+    modalContent: <Empty
+    title="9"
+    />
+  },
+  {
+    image:ten,
+    modalContent: <Empty 
+    title="10"
+    />
+  }
+];
 
 export default ({ tools, setIsModalVisibility, setCurrentModal }) => {
   return (
@@ -35,15 +99,7 @@ export default ({ tools, setIsModalVisibility, setCurrentModal }) => {
             <img src={allfour} className="image" />
           </a>
 
-          <p
-            // onClick={() => {
-            //   setIsModalVisibility(true);
-            //   setCurrentModal(<div>
-            //     fsdfsdf
-            //   </div>);
-            //   tools.disableScroll();
-            // }}
-          >
+          <p>
             With Accedo, I have worked extensively on the All4 app created by
             Channel 4 UK. We develop applications for platforms such as Amazon
             Fire TV, Samsung TV, Youview, Freeview and Playstation. My work
@@ -56,16 +112,35 @@ export default ({ tools, setIsModalVisibility, setCurrentModal }) => {
 
           <img src={alllogos} className="image" />
         </div>
+
         <div className="grid-cont">
-          <div className="grid-item">
-            <img className="port-img" src={design}></img>
+          {imageArray.map((item) => (
+            <div className="grid-item">
+              <img
+                className="port-img"
+                src={item.image}
+                onClick={() => {
+                  setIsModalVisibility(true);
+                  setCurrentModal(item.modalContent);
+                  tools.disableScroll();
+                }}
+              ></img>
+            </div>
+          ))}
+          {/* <div className="grid-item">
+            <img
+              onClick={() => {
+                setIsModalVisibility(true);
+                setCurrentModal(<div>modal 1</div>);
+                tools.disableScroll();
+              }}
+              className="port-img"
+              src={design}
+            ></img>
           </div>
           <div className="grid-item">
             <img className="port-img" src={prototype}></img>
           </div>
-          {/* <div className="grid-item">
-                        <img className="port-img" src={develop}></img>
-                    </div> */}
           <div className="grid-item">
             <img className="port-img" src={five}></img>
           </div>
@@ -75,9 +150,6 @@ export default ({ tools, setIsModalVisibility, setCurrentModal }) => {
           <div className="grid-item">
             <img className="port-img" src={six}></img>
           </div>
-          {/* <div className="grid-item">
-                        <img className="port-img" src={seven}></img>
-                    </div> */}
           <div className="grid-item">
             <img className="port-img" src={eight}></img>
           </div>
@@ -92,7 +164,7 @@ export default ({ tools, setIsModalVisibility, setCurrentModal }) => {
           </div>
           <div className="grid-item">
             <img className="port-img" src={twelve}></img>
-          </div>
+          </div> */}
         </div>
         <p
           style={{

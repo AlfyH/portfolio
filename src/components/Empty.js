@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Empty = () => {
+const Empty = ({ title }) => {
   return (
     <div>
-      sdfasdf
+      {title}
     </div>
   );
 };
